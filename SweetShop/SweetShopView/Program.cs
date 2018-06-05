@@ -29,6 +29,7 @@ namespace SweetShopView
         public static IUnityContainer BuildUnityContainer()
         {
             var currentContainer = new UnityContainer();
+           
             currentContainer.RegisterType<DbContext, AbstractDbContext>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<ICustomerService, CustomerServiceBD>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<IIngredientService, IngredientServiceBD>(new HierarchicalLifetimeManager());
@@ -36,6 +37,7 @@ namespace SweetShopView
             currentContainer.RegisterType<ICakeService, CakeServiceBD>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<IFridgeService, FridgeServiceBD>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<IMainService, MainServiceBD>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<IReportService, ReportServiceBD>(new HierarchicalLifetimeManager());
 
             return currentContainer;
         }

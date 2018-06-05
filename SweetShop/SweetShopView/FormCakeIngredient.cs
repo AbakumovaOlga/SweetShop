@@ -29,7 +29,6 @@ namespace SweetShopView
             InitializeComponent();
             this.service = service;
         }
-        
         private void FCISave_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(FCINumber.Text))
