@@ -111,6 +111,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormCustomerRequests";
             this.Text = "FormCustomerRequests";
+            this.Load += new System.EventHandler(this.FormCustomerRequests_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -31,6 +31,16 @@ namespace SweetShopService.ImplementationsList
 
 
         }
+        /* public List<CustomerViewModel> GetList()
+        {
+            List<CustomerViewModel> result = (from cus in source.Customers 
+                                             select new CustomerViewModel
+                                             {
+                                                 Id = cus.Id,
+                                                 CustomerFIO = cus.CustomerFIO
+                                             }).ToList();
+            return result;
+        }*/
 
         public CustomerViewModel GetElement(int id)
         {
