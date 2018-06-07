@@ -195,9 +195,16 @@ namespace SweetShopView
             var form = new FormCustomerRequests();
             form.ShowDialog();
         }
+
         private void FormMain_Load(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        private void mailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new FormMails();
+            form.ShowDialog();
         }
     }
 }
