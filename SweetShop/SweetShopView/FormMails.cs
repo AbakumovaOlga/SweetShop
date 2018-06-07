@@ -27,7 +27,7 @@ namespace SweetShopView
                 if (list != null)
                 {
                     dataGridView1.DataSource = list;
-                    dataGridView1.Columns[0].Visible = true;
+                    dataGridView1.Columns[0].Visible = false;
                     dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 }
             }

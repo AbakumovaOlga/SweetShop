@@ -87,8 +87,8 @@ namespace SweetShopService.ImplementationsList
             }
             else
             {
+                throw new Exception("Клиент не найден");
             }
-            throw new Exception("Клиент не найден");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using SweetShopService.BindingModels;
+﻿using SweetShopRestApi.Services;
+using SweetShopService.BindingModels;
 using SweetShopService.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -57,6 +58,18 @@ namespace SweetShopRestApi.Controllers
         public void ReplenishFridge(FridgeIngredientBindingModel model)
         {
             _service.ReplenishFridge(model);
+        }
+
+        [HttpGet]
+        public IHttpActionResult GetInfo()
+        {
+            ReflectionService service = new ReflectionService();
+            var list = service.GetInfoByAssembly();
+            if (list == null)
+            {
+                InternalServerError(new Exception("Нет данных"));
+            }
+            return Ok(list);
         }
     }
 }
