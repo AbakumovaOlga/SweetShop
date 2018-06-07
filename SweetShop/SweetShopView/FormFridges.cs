@@ -31,7 +31,6 @@ namespace SweetShopView
         {
             LoadData();
         }
-
         private void LoadData()
         {
             try
